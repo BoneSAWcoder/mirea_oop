@@ -4,3 +4,4 @@ a = str(123)
 b = ''
 for i in range (len(a)):
     b += a[2-i]
+print(b)

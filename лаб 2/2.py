@@ -4,6 +4,7 @@
 salary = 100.000
 ps = 10
 
-tax = salary*(100//ps)
+tax = salary*(ps/100)
 salary_after_tax = salary - tax
 
+print(f'налог: {tax}, заплата после учета налога: {salary_after_tax}')

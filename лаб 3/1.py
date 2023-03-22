@@ -8,4 +8,4 @@ a = 10
 flag = True
 if D * math.sqrt(2) < a :
     flag = False
-print(flag)
+print(('нельзя', 'можно')[flag])

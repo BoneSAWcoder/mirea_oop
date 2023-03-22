@@ -14,11 +14,14 @@ def destruct(num):
     return [d3, d2, d1]
 a_d = destruct(a)
 b_d = destruct(b)
-a_sum = sum(a_d)
-b_sum = sum(b_d)
-a_diff = a_d[0] - a_d[1] - a_d[2]
-b_diff = b_d[0] - b_d[1] - b_d[2]
+summ = sum(a_d) + sum(b_d)
+diff = sum(a_d) - sum(b_d)
 a_mult = a_d[0] * a_d[1] * a_d[2]
 b_mult = b_d[0] * b_d[1] * b_d[2]
+mult = a_mult * b_mult
+ab_div = sum(a_d)/sum(b_d)
 
-ab_div = a_sum/b_sum
+print('сумма: ', summ)
+print('разность', diff)
+print('умножение', mult)
+print('деление', ab_div)

@@ -7,3 +7,5 @@ for i in range (3):
         for k in range(3):
             if j == i or k == i or k == j: continue
             b.append(a[i] + a[j]+ a[k])
+
+print(b)

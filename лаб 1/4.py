@@ -1,4 +1,3 @@
-import math as m
 a = 1
 d = 2
 n = 5

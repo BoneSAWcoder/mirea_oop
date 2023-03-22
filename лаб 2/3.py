@@ -10,3 +10,10 @@ a //= 10
 tens = a % 10 # б
 sum = tens + ones # в
 mult = tens * ones # г
+
+print(f'''
+    {tens} десятков
+    {ones} единиц
+    {sum} - сумма цифр
+    {mult} - произведение цифр
+    ''')
