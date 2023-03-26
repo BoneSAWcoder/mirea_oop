@@ -1,0 +1,16 @@
+<Catalog>
+    <Books>
+        <Book id="1" price="550"> 
+            <Title>Война и мир</Title> 
+            <Author>Л.Н. Толстой</Author>
+        </Book>
+        <Book id="2" price="350">
+            <Title>Мертвые души</Title>
+            <Author>Н.В. Гоголь</Author>
+        </Book>
+        <Book id="3" price="470">
+            <Title>Евгений Онегин</Title>
+            <Author>А.С. Пушкин</Author>
+        </Book>
+    </Books>
+</Catalog>
