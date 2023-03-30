@@ -19,9 +19,10 @@ subject_tasks = {}
 for subject in root.findall('student[@name = "Гаврилушкин Сергей Андреевич"]/subject'):
     tasks = int(subject.findtext('tasks'))
     tasks_done = int(subject.findtext('tasks_done'))
+    subject_tasks[subject.get('name')] = (tasks, tasks_done)
+
     tasks_counter += tasks
     tasks_done_counter += tasks_done
-    subject_tasks[subject.get('name')] = (tasks, tasks_done)
 
 print('Предмет, невыполнено задач')
 subjects_over_50 = []
