@@ -4,4 +4,5 @@
 
 a = 40
 b = 2
+
 print(int(a%b == 0 or b%a == 0))

@@ -6,14 +6,14 @@ root = tree.getroot()
 
 d = {}
 names = []
-
+full_names = []
 
 for student in root.findall('student'):
     names.append(student.get('name').split(' ')[0])
+    full_names.append(student.get('name'))
 
-for i in set(names):
-    d[i] = names.count(i)
+for i in set(names): 
+    d[i] = names.count(i) 
 
-for student in root.findall('student'):
-    name = student.get('name')
-    print(name, '; Однофамильцев:', d[name.split(' ')[0]])
+for student in full_names:
+    print(student, '; Однофамильцев:', d[student.split(' ')[0]])

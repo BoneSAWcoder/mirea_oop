@@ -19,10 +19,13 @@ for i in json_data['content']['universalCompetencyRows']:
     print()
 
 while True:
-    user_input = input('введите код компетенции:')
+    flag = 0
+    user_input = input('введите код компетенции:').upper()
     for i in json_data['content']['universalCompetencyRows']:
         if i['competence']['code'] == user_input:
+            flag = 1
             for j in i['indicators']:
                 print(j['content'])
-                break
+            break
+    if flag: break
     print('Кода не существует')

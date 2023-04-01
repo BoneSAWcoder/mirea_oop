@@ -11,4 +11,5 @@ x.field_names = ['ID', 'Title', 'Author']
 
 for book in root.findall('Books/Book'):
     x.add_row([book.get('id'), book.findtext('Title'), book.findtext('Author')])
+
 print(x)

@@ -1,6 +1,6 @@
 import matplotlib.pyplot as plt
 
-mult = 1
+mult = 10
 
 
 delt = 9 * mult

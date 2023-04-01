@@ -6,6 +6,7 @@ with open('лаб 5/2.json', 'r', encoding="utf-8") as j:
 
 name = "Иванов Иван Иванович 0"
 year = 2010
+
 x = []
 y = []
 for i in json_data["workers"]:
@@ -18,32 +19,32 @@ for i in json_data["workers"]:
 plt.bar(x, y, width=0.4, color = 'green')
 plt.xlabel('месяц')
 plt.ylabel('выплата')
-plt.legend()
 plt.show()
+
+year = 2011
 
 x = []
 y = []
-payment = []
 payment_max = []
 payment_min = []
-year = 2011
 for i in json_data["workers"]:
-    worker_payment = 0
-    worker_month_count = 0
+    payment = []
     for j in i["Выплаты"]:
         if int(j["Год"]) == year:
-            worker_payment += int(j["Размер выплаты"])
-            worker_month_count += 1
             payment.append(int(j["Размер выплаты"]))
     payment_max.append(max(payment))
     payment_min.append(min(payment))
-    x.append(worker_payment//worker_month_count)
+    x.append(sum(payment)//len(payment))
     y.append(i["ФИО"])
 
 plt.pie(x, labels= y)
 plt.show()
 
-plt.bar(y, payment_max, 0.4, color = 'red')
-plt.bar(y, x, 0.4, color = 'green')
-plt.bar(y, payment_min, 0.4, color = 'blue')
+width = 0.3
+plt.bar([i - width for i in range(len(y))], payment_max, width, color = 'red')
+plt.bar([i for i in range(len(y))], x, width, color = 'green')
+plt.bar([i + width for i in range(len(y))], payment_min, width, color = 'blue')
+plt.xticks([i for i in range(len(y))], y)
+plt.xlabel('workers')
+plt.ylabel('payment')
 plt.show()
